@@ -76,6 +76,8 @@ body {
     white-space: nowrap;
     background: transparent;
     border: none;
+    animation-duration: 1s;
+    animation-name: main-text;
 }
 
 .sub-text:hover {
