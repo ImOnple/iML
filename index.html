@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <img src="./sources/img/1.png" id="mc-img">
+    <section id="section1"></section>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css">
+    <link rel="javascript" href="./index.js">
+    <title>iML</title>
+    <link rel="icon" href="./favicon.ico" />
+</head>
+<body>
+    <div class="maintext">
+        <h1 class="main-text">Hello World!</h1>
+        <button class="sub-text">I Love..? Programming</button>
+    </div>
+
+    <script>
+        var text = document.querySelector('.sub-text');
+        text.ondblclick = function() {
+            text.style.animation = "main-text-click .5s";
+            text.textContent = 'Im Programming With HTML';
+        }
+    </script>
+</body>
+</html>

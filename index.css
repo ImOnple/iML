@@ -1,0 +1,140 @@
+::-webkit-scrollbar {
+    display: none;
+}
+
+html { 
+    scroll-behavior: smooth !important; 
+}
+
+body {
+    background: linear-gradient(180deg, #23395d, #152238);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 200vh;
+    width:max-content;
+    text-size-adjust: auto;
+}   
+
+#mc-img {
+    position: relative;
+    width: 100vmax;
+    top: -8px;
+    left: -8px;
+}
+
+#section1 {
+    height: 0px;
+    position: absolute;
+    top: 0px;
+}
+
+.maintext {
+    text-align: center;
+    color: #fff;
+    font-size: 100px;
+    line-height: 10px;
+    position: absolute;
+    bottom:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    display:flex;
+    animation-duration: 1s;
+    animation-name: main-text;
+}
+
+.main-text {
+    text-align: center;
+    color: #fff;
+    font-size: 100px;
+    position: relative;
+    bottom:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    display:flex;
+    white-space: nowrap;    
+    animation-duration: 1s;
+    animation-name: hovertextnot;
+    opacity: 100%;
+}
+
+.main-text:hover {
+    animation-name: hovertext;
+    animation-duration: 1s;
+    letter-spacing: 5px;
+}
+
+.sub-text {
+    color: #fff;
+    text-align: center;
+    font-size:30px;
+    font-weight:550;
+    position:absolute;
+    bottom:55%;
+    right:50%;
+    transform: translate(50%, 230%);
+    display:inline-block;
+    white-space: nowrap;
+    background: transparent;
+    border: none;
+}
+
+.sub-text:hover {
+    cursor: pointer;
+}
+
+
+@keyframes main-text {
+    from {
+        opacity: 0%;
+        letter-spacing: 5px;
+    }
+
+    to {
+        opacity: 100%;
+        letter-spacing: normal;
+    }
+}
+
+@keyframes main-text-click {
+    0% {
+        font-size: 30px;
+    }
+
+    5% {
+        font-size: 31px;
+    }
+
+    100% {
+        font-size: 30px;
+    }
+}
+
+@keyframes hovertext {
+    from {
+        letter-spacing: normal;
+    }
+
+    to {
+        letter-spacing: 5px;
+    }
+}
+
+@keyframes hovertextnot {
+    from {
+        letter-spacing: 5px;
+    }
+
+    to {
+        letter-spacing: normal;
+    }
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0%;
+    }
+
+    to {
+        opacity: 100%;
+    }
+}
