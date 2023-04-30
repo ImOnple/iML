@@ -16,13 +16,43 @@
         <h1 class="main-text">Hello World!</h1>
         <button class="sub-text">I Love..? Programming</button>
     </div>
-
+    <br>
+    <form name="sanscode" target="iframe1">
+        <input type="text" placeholder="코드 입력하기.." id="code">
+        <input type="submit" id="code2" onclick="codesubmit()">
+        <iframe id="iframe1" name="iframe1" style="display:none"></iframe>
+    </form>
     <script>
         var text = document.querySelector('.sub-text');
         text.ondblclick = function() {
             text.style.animation = "main-text-click .5s";
             text.textContent = 'Im Programming With HTML';
         }
+
+        function codesubmit() {
+            var code = document.sanscode.code;
+            var codename = code.value;
+
+            if(codename == ""){
+                var audio = document.getElementById("sans");
+                audio.volume = 0.3;
+                audio.play();
+                alert("아무것도 안 적었잖아.");
+
+            }else if(codename == "yoshi"){   
+                var audio = document.getElementById("yoshi");
+                audio.volume = 0.5;
+                audio.play();
+
+            }else {
+                var audio = document.getElementById("badumtss");
+                audio.volume = 0.5;
+                audio.play();
+            }
+        }
     </script>
+    <audio id="yoshi" src="./sources/aud/yoshi.mp3"></audio>
+    <audio id="sans" src="./sources/aud/sans.mp3"></audio>
+    <audio id="badumtss" src="./sources/aud/badumtss.mp3"></audio>
 </body>
 </html>

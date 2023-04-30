@@ -38,8 +38,6 @@ body {
     left:50%;
     transform: translate(-50%, -50%);
     display:flex;
-    animation-duration: 1s;
-    animation-name: main-text;
 }
 
 .main-text {
@@ -51,15 +49,14 @@ body {
     left:50%;
     transform: translate(-50%, -50%);
     display:flex;
-    white-space: nowrap;    
-    animation-duration: 1s;
-    animation-name: hovertextnot;
+    white-space: nowrap;
     opacity: 100%;
+    transition: 1s;
+    animation-duration: 1s;
+    animation-name: main-text;
 }
 
 .main-text:hover {
-    animation-name: hovertext;
-    animation-duration: 1s;
     letter-spacing: 5px;
 }
 
@@ -78,12 +75,45 @@ body {
     border: none;
     animation-duration: 1s;
     animation-name: main-text;
+    transition: 1s;
 }
 
 .sub-text:hover {
     cursor: pointer;
+    letter-spacing: 2px;
 }
 
+#code {
+    height: 30px;
+    width: 320px;
+    font-size: 25px;
+    border: #fff;
+    border-radius: 3px;
+    opacity: 0%;
+    transition: 0.5s ease-out;
+    position:absolute;
+    bottom:-820px;
+}
+
+#code2 {
+    height: 32px;
+    font-size: 20px;
+    border: #fff;
+    border-radius: 3px;
+    opacity: 0%;
+    transition: 0.5s ease-out;
+    position:absolute;
+    bottom:-820px;
+    left:340px;
+}
+
+#code:hover {
+    opacity: 50%;
+}
+
+#code2:hover {
+    opacity: 50%;
+}
 
 @keyframes main-text {
     from {
@@ -108,26 +138,6 @@ body {
 
     100% {
         font-size: 30px;
-    }
-}
-
-@keyframes hovertext {
-    from {
-        letter-spacing: normal;
-    }
-
-    to {
-        letter-spacing: 5px;
-    }
-}
-
-@keyframes hovertextnot {
-    from {
-        letter-spacing: 5px;
-    }
-
-    to {
-        letter-spacing: normal;
     }
 }
 
