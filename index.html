@@ -6,20 +6,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="iML - 와샌즈">"
     <link rel="stylesheet" href="./index.css">
     <link rel="javascript" href="./index.js">
     <title>iML</title>
     <link rel="icon" href="./favicon.ico" />
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
 <body>
     <div class="maintext">
+        <h2 class="cache">사이트 업데이트를 위해 캐시를 지우고 사이트 접속을 권장합니다!</h2>
         <h1 class="main-text">Hello World!</h1>
         <button class="sub-text">I Love..? Programming</button>
     </div>
     <br>
     <form name="sanscode" target="iframe1">
         <input type="text" placeholder="코드 입력하기.." id="code">
-        <input type="submit" id="code2" onclick="codesubmit()">
+        <input type="submit" id="code2" onclick="codesubmit()" >
         <iframe id="iframe1" name="iframe1" style="display:none"></iframe>
     </form>
     <script>
@@ -44,15 +47,41 @@
                 audio.volume = 0.5;
                 audio.play();
 
+            }else if(codename == "glados"){   
+                var audio = document.getElementById("glados");
+                audio.volume = 0.3;
+                audio.play();
+
+            }else if(codename == "mario"){   
+                var audio = document.getElementById("mario");
+                audio.volume = 0.5;
+                audio.play();
+
             }else {
                 var audio = document.getElementById("badumtss");
                 audio.volume = 0.5;
                 audio.play();
             }
         }
-    </script>
+
+        const agent = window.navigator.userAgent.toLowerCase();
+        let browserName;
+        switch (true) {
+            case agent.indexOf("firefox") > -1:
+                browserName = "Mozilla Firefox" ;
+                swal("알림","이 사이트는 Firefox 브라우저로 보는것을 추천하지 않습니다!", "warning");
+        }
+        
+        let filter = "win16|win32|win64|mac|macintel";
+        if(0 > filter.indexOf(navigator.platform.toLowerCase())){
+            swal("알림","이 사이트는 모바일로 보는것을 추천하지 않습니다!", "warning");
+        }else {
+        }
+        </script>
     <audio id="yoshi" src="./sources/aud/yoshi.mp3"></audio>
     <audio id="sans" src="./sources/aud/sans.mp3"></audio>
     <audio id="badumtss" src="./sources/aud/badumtss.mp3"></audio>
+    <audio id="glados" src="./sources/aud/감자도스.wav"></audio>
+    <audio id="mario" src="./sources/aud/mario.mp3"></audio>
 </body>
 </html>

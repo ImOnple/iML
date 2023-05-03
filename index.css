@@ -28,6 +28,29 @@ body {
     top: 0px;
 }
 
+#sanstyping {
+    background: none;
+    border: none;
+    font-weight: bolder;
+    font-size: large;
+}
+
+.cache {
+    text-align: center;
+    color: #fff;
+    font-size: 25px;
+    line-height: 10px;
+    white-space: nowrap;
+    position: absolute;
+    font-weight: 100;
+    bottom:200%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    display:inline-block !important;
+    animation-duration: 1s;
+    animation-name: main-text;
+}
+
 .maintext {
     text-align: center;
     color: #fff;
@@ -93,6 +116,8 @@ body {
     transition: 0.5s ease-out;
     position:fixed;
     bottom:10px;
+    font-family: 'DungGeunMo';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff') format('woff');
 }
 
 #code2 {
@@ -105,6 +130,8 @@ body {
     position:fixed;
     bottom:10px;
     left:340px;
+    font-family: 'DungGeunMo';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff') format('woff');
 }
 
 #code:hover {
